@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "603568495927",
+    "project_id": "copy-buddy",
+    "storage_bucket": "copy-buddy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603568495927:android:690411e5b2df09d8540eb2",
+        "android_client_info": {
+          "package_name": "com.example.copy_bud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603568495927-mci7lb1iael4937r3a37hpen16h4gvc8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBv18B9xdw0vIdw_ViYr8GTtIgrH-o4CHc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603568495927-mci7lb1iael4937r3a37hpen16h4gvc8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

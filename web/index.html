@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+  <meta name="google-signin-client_id"
+    content="603568495927-mci7lb1iael4937r3a37hpen16h4gvc8.apps.googleusercontent.com">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="copy_bud">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="star.png" />
+
+  <title>copy_bud</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    var serviceWorkerVersion = null;
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+
+</head>
+
+<body>
+  <style>
+    body {
+      /* background-color: #0a0a0a; */
+      height: 100vh;
+      width: 100vw;
+      margin: 0;
+    }
+
+    .main-content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity .25s ease-out;
+    }
+  </style>
+
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+    "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+    "https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBKgnu29b274TXVpaMv-DIjwjOX4QbZBCI",
+      authDomain: "copy-buddy.firebaseapp.com",
+      projectId: "copy-buddy",
+      storageBucket: "copy-buddy.appspot.com",
+      messagingSenderId: "603568495927",
+      appId: "1:603568495927:web:e6c34d1615c972a4540eb2"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+
+    function delay(time) {
+      return new Promise(resolve => setTimeout(resolve, time));
+    }
+
+    window.addEventListener('load', function (ev) {
+      var loaderContent = document.querySelector('#loader-content');
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function (engineInitializer) {
+          engineInitializer.initializeEngine().then(async function (appRunner) {
+            loaderContent.style.opacity = "0";
+            await delay(300);
+            await appRunner.runApp();
+          })
+        }
+      });
+    });
+
+  </script>
+  <div class="main-content" id="loader-content">
+    <img src="./assets/city.gif" alt="My App Logo" />
+  </div>
+</body>
+
+</html>
